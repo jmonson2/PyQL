@@ -9,7 +9,8 @@ class PackerFactory:
     def __init__(self):
         pass
 
-    def get_packer(self, val: Any) -> Packer:
+    @staticmethod
+    def get_packer(val: Any) -> Packer:
             match val:
                 case int():
                     return IntegerPacker()

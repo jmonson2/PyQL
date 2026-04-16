@@ -1,7 +1,8 @@
-from data.util.packer.packer import Packer
 from data.util.packer.impl.packerfactory import PackerFactory
+from data.util.packer.packer import Packer
 from data.util.schema import Schema
-from typing import Any, TypeAlias
+
+
 class TypedSchema(Schema):
     schema: dict[str, Schema.ImplementedTypes]
 
