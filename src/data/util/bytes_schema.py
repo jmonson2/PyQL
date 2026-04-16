@@ -11,8 +11,8 @@ class BytesSchema(Schema):
         typed_schema: dict[str, Schema.ImplementedTypes] = {}
         for row in self.schema:
            key_packer: Packer = PackerFactory().get_packer("key")
-           packer: Packer = row[0]
+           val_packer: Packer = row[0]
            data: dict[bytes, bytes] = row[1]
            for key, val in data.items():
-               typed_schema[key_packer.unpack(key)] = packer.unpack(val)
+               typed_schema[key_packer.unpack(key)] = val_packer.unpack(val)
         return typed_schema
