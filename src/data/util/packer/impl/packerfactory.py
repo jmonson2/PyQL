@@ -1,14 +1,13 @@
 from typing import Any
-from data.util.packer.packer import Packer
+
 from data.util.packer.impl.floatpacker import FloatPacker
 from data.util.packer.impl.integerpacker import IntegerPacker
 from data.util.packer.impl.stringpacker import StringPacker
+from data.util.packer.packer import Packer
+
 
 class PackerFactory:
     
-    def __init__(self):
-        pass
-
     @staticmethod
     def get_packer(val: Any) -> Packer:
             match val:

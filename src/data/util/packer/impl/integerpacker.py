@@ -1,10 +1,9 @@
-from data.util.packer.packer import Packer
 import struct
 
-class IntegerPacker(Packer):
+from data.util.packer.packer import Packer
 
-    def __init__(self):
-        super().__init__()
+
+class IntegerPacker(Packer):
 
     def pack(self, val: int) -> bytes:
         return struct.pack('<I', val)
