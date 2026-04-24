@@ -1,0 +1,6 @@
+from typing import Protocol, Any
+
+
+class Serializer(Protocol):
+    def serialize(self, val: Any) -> bytes: ...
+    def deserialize(self, val: bytes) -> Any: ...
